@@ -18,6 +18,9 @@ export default {
       //
     }
   },
+  created () {
+    this.$store.dispatch('clearBillboardGame')
+  },
   computed: {
     billboardGame () {
       return this.$store.getters.getBillboardGame

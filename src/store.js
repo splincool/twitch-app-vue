@@ -19,6 +19,9 @@ export default new Vuex.Store({
     setBillboardGame (state, gameId) {
       state.billboardGame = state.topGames.find(item => item.game._id === gameId)
     },
+    clearBillboardGame (state) {
+      state.billboardGame = {}
+    },
     setStreams (state, streams) {
       state.gameStreams = streams
     },
@@ -50,6 +53,9 @@ export default new Vuex.Store({
     },
     changeBillboardGame ({commit}, gameId) {
       commit('setBillboardGame', gameId)
+    },
+    clearBillboardGame ({commit}) {
+      commit('clearBillboardGame')
     },
     getStreams ({commit}, gameName) {
       commit('clearStreams')
