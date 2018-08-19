@@ -1,18 +1,35 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Billboard
+      :_billboardGame="billboardGame"/>
+    <GamesList/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Billboard from '@/components/Billboard.vue'
+import GamesList from '@/components/games/GamesList.vue'
 
 export default {
   name: 'home',
+  data () {
+    return {
+      //
+    }
+  },
+  computed: {
+    billboardGame () {
+      return this.$store.getters.getBillboardGame
+    }
+  },
   components: {
-    HelloWorld
+    Billboard,
+    GamesList
   }
 }
 </script>
+
+<style>
+
+</style>

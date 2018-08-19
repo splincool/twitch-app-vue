@@ -1,31 +1,39 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="nav"
+      v-if="!showNav">
+      <router-link to="/">
+        <img alt="house" src="./assets/house.png">
+      </router-link>
     </div>
     <router-view/>
   </div>
 </template>
 
+<script>
+export default {
+  computed: {
+    showNav () {
+      return this.$route.name === 'home'
+    }
+  }
+}
+</script>
+
 <style>
+html, body {
+  /* background: linear-gradient(to bottom right, #4b367c, #2a2122); */
+  background: #45346b;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  margin: 0 auto;
+  background: #1e1d1d !important;
+  position: relative;
+  max-width: 1021px;
+  box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.25);
 }
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+#nav img {
+  padding: 5px 0 0 10px;
 }
 </style>
