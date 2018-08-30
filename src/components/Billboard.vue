@@ -52,7 +52,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 75vh;
+  height: 55vh;
 }
 .billboard .game-wrapper {
   width: 100%;
@@ -97,5 +97,10 @@ export default {
 .billboard .text {
   color: #fff;
   font-size: 16px;
+}
+@media only screen and (max-width: 450px) {
+  .billboard .title {
+    font-size: 36px;
+  }
 }
 </style>

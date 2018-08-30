@@ -2,7 +2,7 @@
   <div class="channel">
     <iframe
       class="iframe-video"
-      :src="'http://player.twitch.tv/?channel=' + $route.params.user"
+      :src="'https://player.twitch.tv/?channel=' + $route.params.user"
       height="500"
       width="655"
       frameborder="0"
@@ -14,7 +14,7 @@
       frameborder="0"
       scrolling="no"
       id="chat_embed"
-      :src="'http://www.twitch.tv/embed/' + $route.params.user + '/chat'"
+      :src="'https://www.twitch.tv/embed/' + $route.params.user + '/chat'"
       height="720"
       width="350">
     </iframe>
