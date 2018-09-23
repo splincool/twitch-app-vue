@@ -1,6 +1,6 @@
 module.exports = {
   // options...
-  baseUrl: process.env.NODE_ENV === 'production' ? '/twitch/' : '/',
+  baseUrl: process.env.NODE_ENV === 'production' ? 'projects/twitch/' : '/',
 
   // Other options include:
   outputDir: undefined,
