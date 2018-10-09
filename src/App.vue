@@ -22,7 +22,6 @@ export default {
 
 <style>
 html, body {
-  /* background: linear-gradient(to bottom right, #4b367c, #2a2122); */
   background: #45346b;
 }
 #app {

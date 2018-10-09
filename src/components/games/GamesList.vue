@@ -65,7 +65,6 @@ export default {
 .game-list {
   display: flex;
   justify-content: space-around;
-  /* background: linear-gradient(to bottom right, #55398e, #422f67); */
   background: #4d347c;
   padding: 20px;
 }

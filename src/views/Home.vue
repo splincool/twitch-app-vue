@@ -13,11 +13,6 @@ import GamesList from '@/components/games/GamesList.vue'
 
 export default {
   name: 'home',
-  data () {
-    return {
-      //
-    }
-  },
   created () {
     this.$store.dispatch('clearBillboardGame')
   },
@@ -32,7 +27,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>
